@@ -13,7 +13,7 @@ class Etiquetas(models.Model):
 class ZapatoExtension(models.Model):
     _inherit = 'zapatos.zapato'
 
-    descuento = fields.Float(string='Descuento (%)')
+    descuento_porcentaje = fields.Float(string='Descuento (%)')
     precio_final = fields.Float(
         string='Precio Final',
         compute='_compute_precio_final',
@@ -21,8 +21,8 @@ class ZapatoExtension(models.Model):
     )
     etiqueta_ids = fields.Many2many('etiquetas.etiquetas', string='Etiquetas')
 
-    @api.depends('precio', 'descuento')
+    @api.depends('precio', 'descuento_porcentaje')
     def _compute_precio_final(self):
         for record in self:
-            record.precio_final = record.precio - (record.precio * record.descuento / 100)
+            record.precio_final = record.precio - (record.precio * record.descuento_porcentaje / 100)
 

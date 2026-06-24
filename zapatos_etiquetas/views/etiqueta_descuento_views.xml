@@ -34,14 +34,14 @@
         <field name="view_mode">list,form</field>
     </record>
 
-<!-- La herencia de vista de zapato-->
+
     <record id="view_zapato_form_etiquetas" model="ir.ui.view">
         <field name="name">zapatos.zapato.form.etiquetas</field>
         <field name="model">zapatos.zapato</field>
         <field name="inherit_id" ref="zapatos.view_zapato_form"/>
         <field name="arch" type="xml">
             <xpath expr="//group" position="inside">
-                <field name="descuento"/>
+                <field name="descuento_porcentaje"/>
                 <field name="precio_final" readonly="1"/>
                 <field name="etiqueta_ids" widget="many2many_tags"/>
             </xpath>
