@@ -1,0 +1,16 @@
+<odoo>
+    <record id="view_zapato_form_promo" model="ir.ui.view">
+        <field name="name">zapatos.zapato.form.promo</field>
+        <field name="model">zapatos.zapato</field>
+        <field name="inherit_id" ref="zapatos.view_zapato_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_ver_promociones" type="object" class="oe_stat_button" icon="fa-tags">
+                        <field name="promocion_count" widget="statinfo" string="Promociones"/>
+                    </button>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

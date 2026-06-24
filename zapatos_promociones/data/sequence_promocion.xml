@@ -1,0 +1,9 @@
+<odoo>
+    <record id="seq_zapatos_promocion" model="ir.sequence">
+        <field name="name">Secuencia Promocion Calzado</field>
+        <field name="code">zapatos.promocion</field>
+        <field name="prefix">PROM</field>
+        <field name="padding">3</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>
