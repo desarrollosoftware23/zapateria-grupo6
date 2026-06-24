@@ -7,18 +7,15 @@
         <field name="inherit_id" ref="zapatos.view_zapato_form"/>
         <field name="arch" type="xml">
 
-            <xpath expr="//group" position="inside">
+            <xpath expr="//sheet/group" position="after">
 
                 <separator string="Información Comercial"/>
 
                 <group col="2">
-
                     <field name="proveedor_id"
                            placeholder="Seleccione un proveedor"/>
-
                     <field name="categoria_id"
                            placeholder="Seleccione una categoría"/>
-
                 </group>
 
             </xpath>
